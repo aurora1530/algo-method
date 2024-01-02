@@ -1,24 +1,24 @@
+X = input()
 N = int(input())
-S = input()
+S = input().split()
 
-open_parentheses = []
-open_indexes = {}
-close_indexes = {}
 
-for i in range(N):
-    char = S[i]
-    if char == '(':
-        open_parentheses.append(i)
+stack = []
+
+operator = ['+', '-', '*']
+
+for char in S:
+    if char in operator:
+        right_num: int = stack.pop(-1)
+        left_num: int = stack.pop(-1)
+        if char == '+':
+            push_num = left_num + right_num
+        elif char == '-':
+            push_num = left_num - right_num
+        else:
+            push_num = left_num * right_num
+        stack.append(push_num)
     else:
-        index = open_parentheses.pop()
-        open_indexes[i] = index
-        close_indexes[index] = i
+        stack.append(int(char))
 
-Q = int(input())
-for _ in range(Q):
-    k = int(input())
-    char = S[k]
-    if char == '(':
-        print(close_indexes[k])
-    else:
-        print(open_indexes[k])
+print(f"{X}={stack[0]}")

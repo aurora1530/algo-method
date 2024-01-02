@@ -1,19 +1,21 @@
-N = int(input())
+N, Q = map(int, input().split())
 
-S = input()
+A = [-1] * N
+head = tail = 0
 
-open_parentheses = []
-
-
-ans = 0
-for i in range(N):
-    p = S[i]
-    if p == '(':
-        open_parentheses.append(1)
+for _ in range(Q):
+    query = input().split()
+    if query[0] == '0':
+        v = int(query[1])
+        A[tail] = v
+        tail += 1
+        if tail == N:
+            tail = 0
     else:
-        if len(open_parentheses) == 1:
-            ans = i
-            break
-        else:
-            open_parentheses.pop(-1)
-print(ans)
+        A[head] = -1
+        head += 1
+        if head == N:
+            head = 0
+
+for a in A:
+    print(a)
