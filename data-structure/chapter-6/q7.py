@@ -1,0 +1,5 @@
+N = int(input())
+A = list(map(int, input().split()))
+len_A = len(A)
+set_len_A = len(set(A))
+print(len_A-set_len_A)
