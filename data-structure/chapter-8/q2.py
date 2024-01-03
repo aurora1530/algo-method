@@ -14,4 +14,4 @@ for row in children:
 Q = int(input())
 for _ in range(Q):
     v = int(input())
-    print(' '.join(list(map(int, children[parent[v]]))))
+    print(' '.join(list(map(str, children[parent[v]]))))
