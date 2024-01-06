@@ -10,8 +10,8 @@
       "request": "launch",
       "program": "${file}",
       "console": "integratedTerminal",
-      "justMyCode": true
-      //   "args": ["<", "input.txt", ">", "output.txt"] // input.txtでテストを行う時用
+      "justMyCode": true,
+      "args": ["<", "input.txt", ">", "output.txt"] // input.txtでテストを行う時用
     }
   ]
 }
