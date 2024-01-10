@@ -1,2 +1,2 @@
-A, M = map(int, input().split())
-print(A ^ M)
+F = int(input())
+print(1 << F)

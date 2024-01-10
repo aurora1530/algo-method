@@ -1,3 +1,8 @@
-A, M = map(int, input().split())
-ans = A & M
-print('No' if ans == 0 else 'Yes')
+N = int(input())
+F = list(map(int, input().split()))
+
+ans = 0
+for f in F:
+    ans |= 1 << f
+
+print(ans)

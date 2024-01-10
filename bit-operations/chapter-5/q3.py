@@ -1,2 +1,3 @@
-F = int(input())
-print(1 << F)
+A, i = map(int, input().split())
+
+print(A ^ (1 << i))

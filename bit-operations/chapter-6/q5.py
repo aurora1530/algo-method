@@ -1,2 +1,5 @@
-A, M = map(int, input().split())
-print('Yes' if A & M == M else 'No')
+N, X = map(int, input().split())
+
+ans = N & (~(1 << X))
+
+print('No' if ans == 0 else 'Yes')

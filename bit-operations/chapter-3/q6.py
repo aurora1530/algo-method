@@ -1,3 +1,3 @@
-A, i = map(int, input().split())
+N = int(input())
 
-print(A | (1 << i))
+print(int('1'+'0'*N, 2))
